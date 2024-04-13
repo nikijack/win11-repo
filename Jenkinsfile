@@ -37,6 +37,5 @@ pipeline {
     		repository: 'assign-maven-snapshot', 
     		version: '1.0-SNAPSHOT'
     	}
-    }        
-    }
+    }       
 }
