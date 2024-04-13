@@ -9,7 +9,7 @@ pipeline {
       }
      stage('Maven build') {
          steps {
-             sh 'mvn clean install -Dmaven.repo.local=C:/ProgramData/Jenkins/.jenkins/workspace/assign-cd-pipeline'
+             sh 'mvn clean install'
          }
      }
     }
