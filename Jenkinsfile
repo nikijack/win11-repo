@@ -19,5 +19,24 @@ pipeline {
             }
         }
     }
+    stage('Upload jar file to nexus' {
+    	steps {
+    		nexusArtifactUploader artifacts: [
+    			[
+    				artifactId: 'win11-repo', 
+    				classifier: '', 
+    				file: 'target\\win11-repo-1.0-SNAPSHOT.jar', 
+    				type: 'jar'
+    			]
+    		],
+    		credentialsId: 'nexus', 
+    		groupId: 'com.mycompany.app', 
+    		nexusUrl: 'http://localhost:8081/', 
+    		nexusVersion: 'nexus3', 
+    		protocol: 'http', 
+    		repository: 'assign-maven-snapshot', 
+    		version: '1.0-SNAPSHOT'
+    	}
+    }        
     }
 }
