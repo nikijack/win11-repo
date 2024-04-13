@@ -30,11 +30,11 @@ pipeline {
 				],
 				credentialsId: 'nexus', 
 				groupId: 'com.mycompany.app', 
-				nexusUrl: 'http://localhost:8081/', 
+				nexusUrl: 'http://localhost:8081', 
 				nexusVersion: 'nexus3', 
 				protocol: 'http', 
 				repository: 'assign-maven-snapshot', 
-				version: '1.0-SNAPSHOT'
+				version: '0.1'
 			}			
 		}
 	}
