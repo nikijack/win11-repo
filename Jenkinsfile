@@ -12,5 +12,12 @@ pipeline {
              bat 'mvn clean install'
          }
      }
+    stage('sonarqube-analysis') {
+        steps {
+            withSonarQubeEnv(installationName: 'sonarqube', credentialsId: 'win11-sonar-token') {
+                bat 'mvn sonar:sonar'
+            }
+        }
+    }
     }
 }
