@@ -6,5 +6,10 @@ pipeline {
 				git 'https://github.com/nikijack/win11-repo.git'
 			}
 		}
+		stage('Maven build') {
+			steps {
+				bat 'mvn clean install'
+			}
+		}
 	}
 }
