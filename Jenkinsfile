@@ -24,7 +24,7 @@ pipeline {
 					[
 						artifactId: 'win11-repo', 
 						classifier: '', 
-						file: 'target\\win11-repo-1.0-SNAPSHOT.jar', 
+						file: 'target/win11-repo-0.1.jar', 
 						type: 'jar'
 					]
 				],
