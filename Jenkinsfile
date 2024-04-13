@@ -9,7 +9,7 @@ pipeline {
       }
      stage('Maven build') {
          steps {
-             echo "build waiting"
+             sh 'mvn clean install -Dmaven.repo.local=C:\ProgramData\Jenkins\.jenkins\workspace\assign-cd-pipeline'
          }
      }
     }
