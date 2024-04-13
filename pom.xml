@@ -5,8 +5,12 @@
   <artifactId>win11-repo</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
+
+  
   <name>win11-repo</name>
   <url>http://maven.apache.org</url>
+
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,4 +19,21 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+  
 </project>
