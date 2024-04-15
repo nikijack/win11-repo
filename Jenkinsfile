@@ -22,7 +22,7 @@ pipeline {
 		stage('Upload jar file to nexus') {
 			when {
 				expression {
-					${currentBuild.currentResult} == 'BUILD SUCCESS'
+					${currentBuild.currentResult} == 'SUCCESS'
 				}
 			}
 			steps {
