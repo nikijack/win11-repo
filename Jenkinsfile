@@ -21,9 +21,9 @@ pipeline {
 		}
 		stage('Upload jar file to nexus') {
 			script {
-				def jobResult = jobBuild.getResult()
-				if (jobResult == 'SUCCESS'){
-					steps {
+				steps {
+					def jobResult = jobBuild.getResult()
+					if (jobResult == 'SUCCESS'){					
 						nexusArtifactUploader artifacts: [
 							[
 								artifactId: 'win11-repo', 
