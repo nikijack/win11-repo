@@ -21,26 +21,21 @@ pipeline {
 		}
 		stage('Upload jar file to nexus') {
 			steps {
-				script {
-					def jobResult = jobBuild.getResult()
-					if (jobResult == 'SUCCESS'){					
-						nexusArtifactUploader artifacts: [
-							[
-								artifactId: 'win11-repo', 
-								classifier: '', 
-								file: 'target/win11-repo-0.1.jar', 
-								type: 'jar'
-							]
-						],
-						credentialsId: 'nexus', 
-						groupId: 'com.mycompany.app', 
-						nexusUrl: 'localhost:8081', 
-						nexusVersion: 'nexus3', 
-						protocol: 'http', 
-						repository: 'assign-maven-snapshot', 
-						version: '0.1'
-					}
-				}
+				nexusArtifactUploader artifacts: [
+					[
+						artifactId: 'win11-repo', 
+						classifier: '', 
+						file: 'target/win11-repo-0.1.jar', 
+						type: 'jar'
+					]
+				],
+				credentialsId: 'nexus', 
+				groupId: 'com.mycompany.app', 
+				nexusUrl: 'localhost:8081', 
+				nexusVersion: 'nexus3', 
+				protocol: 'http', 
+				repository: 'assign-maven-snapshot', 
+				version: '0.1'
 			}
 		}
 	}
