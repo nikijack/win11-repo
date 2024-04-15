@@ -15,14 +15,14 @@ pipeline {
 			steps {
 				withSonarQubeEnv(installationName: 'sonarqube', credentialsId: 'win11-sonar-token') {
 					bat 'mvn sonar:sonar'
-					echo ${currentBuild.currentResult}
+					echo "${currentBuild.currentResult}"
 				}
 			}
 		}
 		stage('Upload jar file to nexus') {
 			when {
 				expression {
-					currentBuild.result == 'BUILD SUCCESS'
+					${currentBuild.currentResult} == 'BUILD SUCCESS'
 				}
 			}
 			steps {
