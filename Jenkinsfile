@@ -21,7 +21,7 @@ pipeline {
 		stage('Upload jar file to nexus') {
 			when {
 				expression {
-					currentBuild.result == 'SUCCESS'
+					currentBuild.result == 'BUILD SUCCESS'
 				}
 			}
 			steps {
