@@ -28,7 +28,7 @@ public class MainWindow extends JFrame {
 	/**
 	 * Create the mainWindow frame
 	 */
-	public MainWindow {
+	public MainWindow() {
 		setTitle(BUNDLE.getString("MainWindow.this.title")); //$NON-NLS-1$
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 589, 300);
