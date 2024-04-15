@@ -15,7 +15,7 @@ pipeline {
 			steps {
 				withSonarQubeEnv(installationName: 'sonarqube', credentialsId: 'win11-sonar-token') {
 					bat 'mvn sonar:sonar'
-					echo currentBuild.result
+					echo "TEssssssssssssssssss"
 				}
 			}
 		}
