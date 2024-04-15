@@ -16,7 +16,7 @@ import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
-import javax.swing.SwingConstants;
+import javax.swing.SwingConstants
 import java.util.ResourceBundle;
 
 public class MainWindow extends JFrame {
