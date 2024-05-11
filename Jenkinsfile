@@ -19,7 +19,6 @@ pipeline {
         SONARSCANNER = 'sonarscanner'
         NEXUSPASS = credentials('nexuslogin')
     }
-
     stages {
         stage('Build'){
             steps {
