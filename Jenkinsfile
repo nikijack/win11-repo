@@ -34,7 +34,7 @@ pipeline {
 				],
 				credentialsId: 'nexus', 
 				groupId: 'com.mycompany.app', 
-				nexusUrl: 'http://54.196.188.119:8081/', 
+				nexusUrl: 'http://35.153.18.96:8081/', 
 				nexusVersion: 'nexus3', 
 				protocol: 'http', 
 				repository: 'assign-maven-snapshot', 
