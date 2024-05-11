@@ -8,13 +8,13 @@ pipeline {
 		}
 		stage('Maven build') {
 			steps {
-				bat 'mvn clean install'
+				sh 'mvn clean install'
 			}
 		}
 		stage('sonarqube-analysis') {
 			steps {
 				withSonarQubeEnv(installationName: 'sonarqube', credentialsId: 'win11-sonar-token') {
-					bat 'mvn sonar:sonar'
+					sh 'mvn sonar:sonar'
 					echo "${currentBuild.currentResult}"
 				}
 			}
